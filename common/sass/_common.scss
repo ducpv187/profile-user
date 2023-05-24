@@ -1,0 +1,28 @@
+body {
+    background: #252525 url(../images/tab/page_background.png) 0px 0px repeat-x;
+}
+
+.h-pc {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+.h-sp {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.break-pc {
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+.break-sp {
+    @media (max-width: 968px) {
+        display: block;
+    }
+}

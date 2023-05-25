@@ -310,6 +310,26 @@ body {
   z-index: 1;
 }
 
+.template1 .test {
+  font-size: 3.2rem;
+  color: red;
+}
+
+.template2 .test {
+  font-size: 3.2rem;
+  color: red;
+}
+
+.template3 .test {
+  font-size: 3.2rem;
+  color: red;
+}
+
+.template4 .test {
+  font-size: 3.2rem;
+  color: red;
+}
+
 @keyframes slidein {
   from {
     width: 0%;

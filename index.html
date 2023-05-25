@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" type="text/css" href="common/css/main.css">
+      <link rel="stylesheet" type="text/css" href="common/css/main.css">      
       <title> Urse Profile </title>
   </head>
 
@@ -16,23 +16,48 @@
      <div class="container">
       <div class="cascade">
         <ul class="cascade-menu">
-          <li class="blue js-tabitem" data-left="0" data-color="blue"></li>
-          <li class="green js-tabitem" data-id="1" data-color="green" data-left="6"></li>
-          <li class="yellow js-tabitem" data-id="2" data-color="yellow" data-left="12"></li>
-          <li class="orange js-tabitem" data-id="3" data-color="orange" data-left="18"></li>
+          <li data-href="tab1" class="blue js-tabitem" data-left="0" data-color="blue"></li>
+          <li data-href="tab2" class="green js-tabitem" data-id="1" data-color="green" data-left="6"></li>
+          <li data-href="tab3" class="yellow js-tabitem" data-id="2" data-color="yellow" data-left="12"></li>
+          <li data-href="tab4" class="orange js-tabitem" data-id="3" data-color="orange" data-left="18"></li>
         </ul>
         <div class="tabcontent" data-tabcontent-id="3" data-residual="6">
           <div class="cascade-close">
             <div class="btn-close">X</div>
           </div>
-          <div class="cascade-content"></div>
+          <div id="cascade-content" class="cascade-content"></div>
           <div class="cascade-footer"></div>
         </div>
+
       </div>
      </div>
-    </main> 
-    <footer></footer>       
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <template id="tab1">
+      <div class="template template1">
+        <h2 class="test">tabcontent1</h2>      
+      </div>
+    </template>
+
+    <template id="tab2">
+      <div class="template template2">
+        <h2 class="test">tabcontent2</h2>      
+      </div>
+    </template>
+
+    <template id="tab3">
+      <div class="template template3">
+        <h2 class="test">tabcontent3</h2>      
+      </div>
+    </template>
+
+    <template id="tab4">
+      <div class="template template4">
+        <h2 class="test">tabcontent4</h2>      
+      </div>
+    </template>
+    
+    </main>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>      
     <script src="./common/js/main.js"></script>
   </body>
 

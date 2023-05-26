@@ -226,19 +226,24 @@ body {
 
 .header {
   display: flex;
+  background-image: url("../images/tab/header_light.png");
+  background-repeat: no-repeat;
+  position: relative;
+  height: 16.5rem;
+  top: 5rem;
+  width: 86rem;
+  margin: 0 auto;
 }
 
 .p_top {
   position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .p_top .cascade {
   width: 100%;
-  padding: 15rem 0;
   position: relative;
 }
 .p_top .cascade-menu {
@@ -281,7 +286,7 @@ body {
   height: 50rem;
   background-color: transparent;
   position: absolute;
-  top: 15rem;
+  top: 0;
   left: calc(25% + 0.6rem);
 }
 .p_top .tabcontent .cascade-close {
@@ -308,6 +313,27 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   z-index: 1;
+}
+.p_top .cascade-nav {
+  width: 2.5rem;
+  height: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+.p_top .cascade-nav:hover {
+  background-position: 0px -50px;
+}
+.p_top .cascade-nav.prev {
+  left: -5rem;
+  background-image: url("../images/tab/content_nav_left.png");
+}
+.p_top .cascade-nav.next {
+  right: -5rem;
+  background-image: url("../images/tab/content_nav_right.png");
 }
 
 .template1 .test {

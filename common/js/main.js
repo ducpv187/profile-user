@@ -9,7 +9,10 @@ $(document).ready(function() {
     let idActive = $(this).data("href");
     let template = document.getElementById(idActive);
 
+
+    
     if($(this).hasClass("active")){
+      
       $(this).removeClass("active");      
       //change color Case-close (border) 0
       $(".tabcontent").removeClass("active-color");
@@ -64,7 +67,9 @@ $(document).ready(function() {
             // width: "640px",
             width: widthTabContent ,
             opacity: 1,         
-          }, 400, function() {              
+          }, 400, function() {    
+            
+            // when Acitve => add tabcontent
             let contentTab = template.content.cloneNode(true);  
             document.getElementById("cascade-content").appendChild(contentTab);
             $(".tabcontent .cascade-close").addClass("show-content");
@@ -118,4 +123,6 @@ $(document).ready(function() {
     });           
       document.querySelector(".cascade-content .template ").remove();
   }); 
+
+
 });

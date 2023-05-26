@@ -3,13 +3,15 @@ $(document).ready(function() {
   $( ".cascade-menu .js-tabitem" ).on( "click", function() { 
     let thisClick= $(this);
     let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;  
+
     //global data color
     let dataColor = $(this).data('color');  
 
     //global idActive tabshowcontent
     let idActive = $(this).data("href");
     let template = document.getElementById(idActive);
-
+  
+    //Callback active Function
     if($(this).hasClass("active")){
       closeTab(innerWidthCase,400);
     } else {        
@@ -17,13 +19,48 @@ $(document).ready(function() {
     }          
   });
 
-  //function btn Close => show-hidden content
+  //function button Close => show-hidden content
   $( ".btn-close" ).on( "click", function() {
     let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
-    
+   
+    //callback function closeTab
     closeTab(innerWidthCase,400);    
   }); 
 
+  //function button arrow prev-next
+  $( ".cascade-nav" ).on( "click", function() {
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
+    let thisActive = $(".cascade-menu .js-tabitem.active");
+    let thisIdActive = $(".cascade-menu .js-tabitem.active").data("id") + 1;
+    let thisIdNext;
+    let numberSelectAll = document.querySelectorAll(".js-tabitem");    
+    let datatype = $(this).data("type");    
+    if(thisIdActive < numberSelectAll.length && datatype == "next"){        
+         thisIdNext = thisActive.data("id") + 1;   
+    }
+    else if(thisIdActive > 1 && datatype == "prev"){
+        thisIdNext = thisActive.data("id") - 1;   
+    }
+    else if(thisIdActive == 1 && datatype == "prev"){
+        thisIdNext = numberSelectAll.length - 1;   
+    }
+    else {
+        thisIdNext = 0 ;
+    }    
+    console.log(thisIdNext);   
+    let thisNext = $(`[data-href="tab${( thisIdNext + 1)}"]`);    
+    let dataColor = thisNext.data('color');
+    let template = document.getElementById("tab"+ ( thisIdNext + 1) );
+    
+
+    //callback function closeTab
+    closeTab(innerWidthCase,300); 
+    setTimeout(function() { 
+        openTab(thisNext,innerWidthCase,dataColor,template,400);
+    }, 1000);
+   
+  }); 
+  
   //function OpenTab
   function openTab(thisClick,innerWidthCase,dataColor,template,time){
     thisClick.addClass("active");       
@@ -48,17 +85,21 @@ $(document).ready(function() {
             // when Acitve => add tabcontent
             let contentTab = template.content.cloneNode(true);  
             document.getElementById("cascade-content").appendChild(contentTab);
-            $(".tabcontent .cascade-close").addClass("show-content");                
+            $(".tabcontent .cascade-close").addClass("show-content");  
+
+            setTimeout(function(){
+                //when click => active arrow
+                $( ".cascade-nav" ).addClass('block');
+            },500)          
         });                      
     });
-    $( ".cascade-menu li:not(.active)" ).each(function() {
-        // console.log($(this));          
+    $( ".cascade-menu li:not(.active)" ).each(function() {               
         $(this).animate({               
         zIndex: 1,
         opacity: 0,
         left: 0,            
         }, time);
-    }); 
+    });  
   }
 
   //function CloseTab
@@ -66,12 +107,17 @@ $(document).ready(function() {
     $( ".cascade-menu li" ).removeClass("active");
      
     //change color Case-close (border) 
-    $(".tabcontent").removeClass("active-color");    
+    $(".tabcontent").removeClass("active-color"); 
+    //when click => active arrow
+    $( ".cascade-nav" ).removeClass('block');      
     $( ".tabcontent" ).animate({
       width: "0",
       opacity: 0,         
     }, time, function() {  
-        $(".tabcontent .cascade-close").removeClass("show-content");     
+        //remove show-content=> animation close border
+        $(".tabcontent .cascade-close").removeClass("show-content");   
+                 
+        //hidden tabcontent
         $(".tabcontent").animate({                             
             width: "0",
             opacity: 0,   
@@ -95,6 +141,6 @@ $(document).ready(function() {
     });   
 
     // when No-Acitve => Remove tabcontent
-    document.querySelector(".cascade-content .template ").remove();
+    $(".cascade-content").empty();
   }
 });

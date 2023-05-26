@@ -315,6 +315,8 @@ body {
   z-index: 1;
 }
 .p_top .cascade-nav {
+  display: none;
+  opacity: 0;
   width: 2.5rem;
   height: 5rem;
   cursor: pointer;
@@ -323,6 +325,10 @@ body {
   transform: translateY(-50%);
   background-repeat: no-repeat;
   background-position: 0px 0px;
+}
+.p_top .cascade-nav.block {
+  display: block;
+  opacity: 1;
 }
 .p_top .cascade-nav:hover {
   background-position: 0px -50px;

@@ -2,7 +2,7 @@ $(document).ready(function() {
   //function ClickItem => show-hidden content
   $( ".cascade-menu .js-tabitem" ).on( "click", function() { 
     let thisClick= $(this);
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;  
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;  
 
     //global data color
     let dataColor = $(this).data('color');  
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   //function button Close => show-hidden content
   $( ".btn-close" ).on( "click", function() {
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;
    
     //callback function closeTab
     closeTab(innerWidthCase,400);    
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   //function button arrow prev-next
   $( ".cascade-nav" ).on( "click", function() {
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;
     let thisActive = $(".cascade-menu .js-tabitem.active");
     let thisIdActive = $(".cascade-menu .js-tabitem.active").data("id") + 1;
     let thisIdNext;
@@ -75,9 +75,10 @@ $(document).ready(function() {
         opacity: 1,
         left: "0",            
     }, time, function() {
-        let dataIdTabContent = $(".tabcontent").data("tabcontent-id");
-        let dataResidual = $(".tabcontent").data("residual");
-        let widthTabContent = dataIdTabContent * innerWidthCase - dataResidual;
+        let dataIdTabContent = $(".tabcontent").data("total");
+        let dataMinus = $(".tabcontent").data("minus");
+        let widthTabContent = dataIdTabContent * innerWidthCase - dataMinus;
+        console.log(innerWidthCase);
         $( ".tabcontent" ).animate({            
             width: widthTabContent ,
             opacity: 1,         

@@ -1,10 +1,39 @@
-.header {
-    display: flex;
-    background-image: url("../images/tab/header_light.png");
-    background-repeat: no-repeat;
-    position: relative;
-    height: 16.5rem;
-    top: 5rem;
-    width: 86rem;
-    margin: 0 auto;
+.header {     
+    position: relative;    
+    padding-top: 5rem;
+    &::before {
+        content: "";
+        background-image: url("../images/tab/header_light.png");
+        background-repeat: no-repeat;
+        width: 86rem;
+        height: 4rem;
+        position: absolute;
+        top: 5rem;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: 1;
+    }
+    &-row {
+        display: flex;
+        justify-content: space-between;        
+        position: relative;
+        z-index: 2;        
+        margin: 1.5rem 0; 
+    }  
+    .r-left {
+        width: calc(50% - 1rem);
+        .name-user {
+            font-size: 4rem;
+            color: #fff;
+        }
+        .postion {
+            color: #969696;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+    }
+    .r-right {
+        width: calc(50% - 1rem);
+    }
 }
+  

@@ -188,7 +188,7 @@ ul {
 
 .container {
   width: 100%;
-  max-width: 1060px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -225,14 +225,42 @@ body {
 }
 
 .header {
-  display: flex;
+  position: relative;
+  padding-top: 5rem;
+}
+.header::before {
+  content: "";
   background-image: url("../images/tab/header_light.png");
   background-repeat: no-repeat;
-  position: relative;
-  height: 16.5rem;
-  top: 5rem;
   width: 86rem;
-  margin: 0 auto;
+  height: 4rem;
+  position: absolute;
+  top: 5rem;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 1;
+}
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin: 1.5rem 0;
+}
+.header .r-left {
+  width: calc(50% - 1rem);
+}
+.header .r-left .name-user {
+  font-size: 4rem;
+  color: #fff;
+}
+.header .r-left .postion {
+  color: #969696;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.header .r-right {
+  width: calc(50% - 1rem);
 }
 
 .p_top {
@@ -253,41 +281,46 @@ body {
   position: relative;
   height: 50rem;
 }
-.p_top .cascade-menu li {
-  width: calc(25% - 2rem);
+.p_top .cascade-menu .tab-item {
+  width: calc(33.33% - 2rem);
   height: 50rem;
   position: absolute;
   top: 0;
   cursor: pointer;
   z-index: 1;
 }
-.p_top .cascade-menu li.active {
+.p_top .cascade-menu .tab-item.active {
   z-index: 2 !important;
 }
 .p_top .blue {
-  background-color: blue;
   left: 0;
+  background-image: url("../images/tab/content_box_blue.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
 }
 .p_top .green {
-  background-color: green;
-  left: calc(25% + 0.6rem);
+  left: calc(33.33% + 0.6rem);
+  background-image: url("../images/tab/content_box_green.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
 }
 .p_top .yellow {
-  background-color: yellow;
-  left: calc(50% + 1.2rem);
-}
-.p_top .orange {
-  background-color: orange;
-  left: calc(75% + 1.8rem);
+  left: calc(66.66% + 1.2rem);
+  background-image: url("../images/tab/content_box_orange.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
 }
 .p_top .tabcontent {
   width: 0;
   opacity: 0;
-  height: 50rem;
+  height: 46.8rem;
   background-color: transparent;
   position: absolute;
   top: 0;
-  left: calc(25% + 0.6rem);
+  left: calc(33.33% + 0.6rem);
 }
 .p_top .tabcontent .cascade-close {
   position: relative;
@@ -353,11 +386,6 @@ body {
 }
 
 .template3 .test {
-  font-size: 3.2rem;
-  color: red;
-}
-
-.template4 .test {
   font-size: 3.2rem;
   color: red;
 }

@@ -1,9 +1,6 @@
 .p_top {
     position: relative;
     width: 100%;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
   .cascade {
     width: 100%;    
     position: relative;
@@ -104,7 +101,7 @@
       height: 100%;    
       padding: 1rem;
       margin-top: 1rem;
-      overflow-y: auto; 
+      overflow-y: auto;    
       iframe {
         width: 100%;
         height: calc(100% - 1rem);
@@ -216,8 +213,65 @@
   }
 }
 
+/*templat3 */
+.box-map {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-start;
+  height: 100%;
+  .tab-bar {
+    width: calc(30% - .5rem);
+  }
+  .position-map {
+    width: calc(70% - .5rem);
+    iframe {
+      width: 100%;
+    }
+  }
+  .tab-map-parent {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+  .tab-parent {
+    width: 100%;
+    background-color: gray;
+    color: $white;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .tab-child {
+    display: none;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+ 
+}
 
-
+ .arrow-tab {
+    position: relative;
+    transition: all ease-in .3s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      right: 1rem;
+      border: solid white;
+      border-width: 0 .2rem .2rem 0;
+      display: inline-block;
+      padding: .3rem;      
+      transition: all ease-in .3s;
+    }
+    &.active {
+      &::after {
+        transform: translateY(-45%) rotate(-135deg);
+      }
+    }
+  }
 
 @keyframes slidein {
   from {

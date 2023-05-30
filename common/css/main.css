@@ -333,104 +333,9 @@ body {
   left: 0;
 }
 
-.header {
-  position: relative;
-  padding-top: 5rem;
-}
-.header::before {
-  content: "";
-  background-image: url("../images/tab/header_light.png");
-  background-repeat: no-repeat;
-  width: 86rem;
-  height: 4rem;
-  position: absolute;
-  top: 5rem;
-  transform: translateX(-50%);
-  left: 50%;
-  z-index: 1;
-}
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  margin: 2.5rem 0 1.5rem 0;
-}
-.header .r-left {
-  width: calc(50% - 1rem);
-}
-.header .r-left .name-user {
-  font-size: 4rem;
-  line-height: 1.2;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.header .r-left .postion {
-  color: #969696;
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-.header .r-right {
-  width: calc(50% - 1rem);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-direction: column;
-}
-.header .r-right .mobile {
-  width: 24.5rem;
-  text-align: left;
-  margin-bottom: 2rem;
-}
-.header .r-right .contact {
-  width: 24.5rem;
-  text-align: left;
-}
-.header .r-right .link-tel {
-  font-size: 2rem;
-  line-height: 1;
-  color: #ffffff;
-  padding-left: 2.5rem;
-  position: relative;
-}
-.header .r-right .link-tel::before {
-  content: "";
-  background-image: url("../images/tab/header_icon_phone.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1.6rem;
-  height: 1.6rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-.header .r-right .link-contact {
-  font-size: 2rem;
-  line-height: 1;
-  color: #ffffff;
-  padding-left: 2.5rem;
-  position: relative;
-}
-.header .r-right .link-contact::before {
-  content: "";
-  background-image: url("../images/tab/header_icon_phone.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 1.6rem;
-  height: 1.6rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-}
-
 .p_top {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .p_top .cascade {
   width: 100%;
@@ -630,6 +535,62 @@ body {
   font-size: 1.3rem;
   line-height: 1.2;
   color: #9f9f9f;
+}
+
+/*templat3 */
+.box-map {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.box-map .tab-bar {
+  width: calc(30% - 0.5rem);
+}
+.box-map .position-map {
+  width: calc(70% - 0.5rem);
+}
+.box-map .position-map iframe {
+  width: 100%;
+}
+.box-map .tab-map-parent {
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.box-map .tab-parent {
+  width: 100%;
+  background-color: gray;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.box-map .tab-child {
+  display: none;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.arrow-tab {
+  position: relative;
+  transition: all ease-in 0.3s;
+}
+.arrow-tab::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: 1rem;
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  display: inline-block;
+  padding: 0.3rem;
+  transition: all ease-in 0.3s;
+}
+.arrow-tab.active::after {
+  transform: translateY(-45%) rotate(-135deg);
 }
 
 @keyframes slidein {

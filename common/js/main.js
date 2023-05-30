@@ -78,7 +78,7 @@ $(document).ready(function() {
         let dataIdTabContent = $(".tabcontent").data("total");
         let dataMinus = $(".tabcontent").data("minus");
         let widthTabContent = dataIdTabContent * innerWidthCase - dataMinus;
-        console.log(innerWidthCase);
+        // console.log(innerWidthCase);
         $( ".tabcontent" ).animate({            
             width: widthTabContent ,
             opacity: 1,         
@@ -89,7 +89,7 @@ $(document).ready(function() {
             setTimeout(function(){
                 //append content after border has show
                 document.getElementById("cascade-content").appendChild(contentTab);
-                
+
                 //when click => active arrow
                 $( ".cascade-nav" ).addClass('block');
             },800)          
@@ -143,6 +143,17 @@ $(document).ready(function() {
     });   
 
     // when No-Acitve => Remove tabcontent
-    $(".cascade-content").empty();
+    $(".cascade-content").empty();   
   }
+  //click show map
+  $( document ).on( "click", ".tab-parent" ,function() { 
+    let clickTabParent = $(this);
+    clickTabParent.toggleClass("active");
+    clickTabParent.parent().find(".tab-child").slideToggle();  
+  });
+
+  $( document ).on( "click", ".js-map" , function() {     
+    let dataIframe = $(this).data("iframe");    
+    $(".position-map").empty().append(dataIframe);
+  });
 });

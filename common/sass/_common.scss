@@ -26,3 +26,29 @@ body {
         display: block;
     }
 }
+
+//custom Scroll 
+
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $back_light; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #343434; 
+    border-radius: 1.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #E0E0E0; 
+}
+
+
+ 

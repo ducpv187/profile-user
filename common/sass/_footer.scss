@@ -1,0 +1,94 @@
+.header {     
+    position: relative;    
+    padding-top: 5rem;
+    &::before {
+        content: "";
+        background-image: url("../images/tab/header_light.png");
+        background-repeat: no-repeat;
+        width: 86rem;
+        height: 4rem;
+        position: absolute;
+        top: 5rem;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: 1;
+    }
+    &-row {
+        display: flex;
+        justify-content: space-between;        
+        position: relative;
+        z-index: 2;        
+        margin: 2.5rem 0 1.5rem 0; 
+    }  
+    .r-left {
+        width: calc(50% - 1rem);
+        .name-user {
+            font-size: 4rem;
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .postion {
+            color: #969696;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+    }
+    .r-right {
+        width: calc(50% - 1rem);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: column;
+        .mobile {
+            width: 24.5rem;
+            text-align: left;
+           
+            margin-bottom: 2rem;
+           
+        }
+        .contact {
+            width: 24.5rem;
+            text-align: left;
+        }
+        .link-tel {
+            font-size: 2rem;
+            line-height: 1;
+            color: $white;
+            padding-left: 2.5rem;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url("../images/tab/header_icon_phone.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 1.6rem;
+                height: 1.6rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+        .link-contact {
+            font-size: 2rem;
+            line-height: 1;
+            color: $white;    
+            padding-left: 2.5rem;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url("../images/tab/header_icon_phone.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 1.6rem;
+                height: 1.6rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }     
+        }
+    }
+}
+  

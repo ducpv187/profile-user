@@ -84,14 +84,15 @@ $(document).ready(function() {
             opacity: 1,         
         }, time, function() {                
             // when Acitve => add tabcontent
-            let contentTab = template.content.cloneNode(true);  
-            document.getElementById("cascade-content").appendChild(contentTab);
+            let contentTab = template.content.cloneNode(true);             
             $(".tabcontent .cascade-close").addClass("show-content");  
-
             setTimeout(function(){
+                //append content after border has show
+                document.getElementById("cascade-content").appendChild(contentTab);
+                
                 //when click => active arrow
                 $( ".cascade-nav" ).addClass('block');
-            },500)          
+            },800)          
         });                      
     });
     $( ".cascade-menu li:not(.active)" ).each(function() {               

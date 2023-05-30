@@ -51,14 +51,14 @@
   .tabcontent {
     width: 0;
     opacity: 0;
-    height: 46.8rem;
+    height: 50rem;
     background-color: transparent;
     position: absolute;
     top: 0;
     left: calc(33.33% + 0.6rem);
     .cascade-close {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       background-color: white;
       height: 3px;
       width: 0;      
@@ -67,19 +67,43 @@
         width: 100%;
         animation: slidein 1s ease-in-out;
         opacity: 1;
-      }      
-      .btn-close {
+      }  
+      &::after {
+        content: "";
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        background-color: $white;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 10px;
-        font-size: 1.8rem;
-        color: white;
-        background-color: black;  
-        padding: 0.5rem;   
+        right: 10px;        
+        // width: 1.9rem;
+        // height: 1.5rem;
+        color: white;        
+        padding: 1.5rem;   
+        margin: 0 1rem;
         cursor: pointer;   
-        z-index: 1;
-      }
+        z-index: 2;
+      }    
+      .btn-close {
+        // clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        // background-color: red;
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+        // right: 10px;        
+        // width: 1.9rem;
+        // height: 1.5rem;
+        // color: white;        
+        // padding: 1.5rem;   
+        // cursor: pointer;   
+        // z-index: 1;
+        // background-color: $white;
+        // width: 2rem;
+        // height: 2rem;
+      }   
+    }
+    .cascade-content {
+      height: 100%;
     }
   }
   .cascade-nav {
@@ -111,19 +135,85 @@
   }
 }
 
-
+.template {
+  padding: 1rem 1rem 0 1rem;
+}
 
 .template1 {
-  .test {
-    font-size: 3.2rem;
-    color: red;
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-left {
+     width: calc(50% - 1.5rem); 
+    }
+    &-right {
+      width: calc(50% - 1.5rem); 
+      height: 32rem;
+      display: flex;
+    }
+    .name-company {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      color: $white_dark;
+      margin: 1rem 0;
+    }
+    .name-user {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: $white_dark;
+      margin: 1rem 0;
+    }
+    .position {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      color: $gray_dark;
+      margin-bottom: 3rem;
+    }
+    .mobile {
+      .link-tel {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        color: $gray_dark;
+      }
+    }
+    .what-app {
+      .link-what-app {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        color: $gray_dark;
+      }
+    }
+    .time-start {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      color: $gray_dark;
+    }
+    .email {
+      .link-email {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        color: $gray_dark;
+      }
+    }
+    .website {
+      .link-website {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        color: $gray_dark;
+      }
+    }
   }
 }
 
 .template2 {
-  .test {
-    font-size: 3.2rem;
-    color: red;
+  height: 100%;
+  .iframe-pdf {
+    height: 100%;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 

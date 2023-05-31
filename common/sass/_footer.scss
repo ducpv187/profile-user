@@ -1,3 +1,22 @@
 .footer {
-    
+  border-top: solid 1px #1A1A1A;
+  position: relative;
+  &-line {
+    height: 1px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: #353535;
+    background-color: #353535;
+  }
+  &::before {
+    content: "";
+    background-image: url(../images/tab/footer_light.png);
+    width: 86rem;
+    min-height: 4.3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -20,3 +20,13 @@ $lgm: 968px;
 $lg: 969px;
 $xl: 1200px;
 $xxl: 1605px;
+
+
+// font-family
+// ============================================
+@font-face {
+    font-family: Next-Regular;
+    src: url("../font/SVN-Nexa-Regular.otf");
+}
+
+$Next-Regular : Next-Regular;

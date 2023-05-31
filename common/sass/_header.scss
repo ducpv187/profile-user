@@ -40,15 +40,14 @@
         justify-content: flex-start;
         align-items: flex-end;
         flex-direction: column;
-        .mobile {
-            width: 24.5rem;
-            text-align: left;
-           
-            margin-bottom: 2rem;
-           
+        .gr-contact {
+            width: 28rem;
         }
-        .contact {
-            width: 24.5rem;
+        .mobile {            
+            text-align: left;           
+            margin-bottom: 2rem;           
+        }
+        .contact {            
             text-align: left;
         }
         .link-tel {

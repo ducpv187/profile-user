@@ -36,23 +36,22 @@ $(document).ready(function() {
     let numberSelectAll = document.querySelectorAll(".js-tabitem");    
     let datatype = $(this).data("type");    
     if(thisIdActive < numberSelectAll.length && datatype == "next"){        
-         thisIdNext = thisActive.data("id") + 1;   
+        thisIdNext = thisActive.data("id") + 1;   
     }
     else if(thisIdActive > 1 && datatype == "prev"){
-        thisIdNext = thisActive.data("id") - 1;   
+      thisIdNext = thisActive.data("id") - 1;   
     }
     else if(thisIdActive == 1 && datatype == "prev"){
-        thisIdNext = numberSelectAll.length - 1;   
+      thisIdNext = numberSelectAll.length - 1;   
     }
     else {
-        thisIdNext = 0 ;
+      thisIdNext = 0 ;
     }    
-    console.log(thisIdNext);   
+    //console.log(thisIdNext);   
     let thisNext = $(`[data-href="tab${( thisIdNext + 1)}"]`);    
     let dataColor = thisNext.data('color');
     let template = document.getElementById("tab"+ ( thisIdNext + 1) );
     
-
     //callback function closeTab
     closeTab(innerWidthCase,300); 
     setTimeout(function() { 

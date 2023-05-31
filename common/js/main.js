@@ -155,4 +155,18 @@ $(document).ready(function() {
     let dataIframe = $(this).data("iframe");    
     $(".position-map").empty().append(dataIframe);
   });
+
+
+  //view show pdf js
+
+  // Let's initialize the PDFjs library
+  var pdfjsLib = window['pdfjs-dist/build/pdf'];
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+
+  var pdfViewer =new PDFjsViewer($('.pdfjs-viewer'));
+  
+  // load a PDF file
+
+  pdfViewer.loadDocument('https://anthanhbicsol.com/wp-content/uploads/2023/05/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf');
+
 });

@@ -1,5 +1,9 @@
 body {
-    background: #252525 url(../images/tab/page_background.png) 0px 0px repeat-x;
+    // background: #252525 url(../images/tab/background.jpg) 0px 0px repeat-x;
+    background-image: url("../images/tab/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .h-pc {

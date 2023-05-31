@@ -48,24 +48,30 @@
   }
   .blue {      
     left: 0;
-    background-image: url("../images/tab/content_box_blue.png");
+    // background-image: url("../images/tab/content_box_blue.png");
+    background-image: url("../images/tab/bg1.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: 100% 200%;
+    background-size: cover;
+    // background-size: 100% 200%;
   }
   .green {    
     left: calc(33.33% + 0.6rem);
-    background-image: url("../images/tab/content_box_green.png");
+    // background-image: url("../images/tab/content_box_green.png");
+    background-image: url("../images/tab/bg2.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: 100% 200%;
+    background-size: cover;
+    // background-size: 100% 200%;
   }
   .yellow {  
     left: calc(66.66% + 1.2rem);
-    background-image: url("../images/tab/content_box_yellow.png");
+    // background-image: url("../images/tab/content_box_yellow.png");
+    background-image: url("../images/tab/bg3.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: 100% 200%;
+    background-size: cover;
+    // background-size: 100% 200%;
   }
 
   .tabcontent {
@@ -130,14 +136,14 @@
         height: calc(100% - 1rem);
       }     
     }
-    .cascade-footer {
-      background-image: url("../images/tab/content_footer.png");
-      width: 100%;
-      height: 5rem;      
-      position: absolute;
-      left: 0;
-      bottom: -3.5rem;
-    }
+    // .cascade-footer {
+    //   background-image: url("../images/tab/content_footer.png");
+    //   width: 100%;
+    //   height: 5rem;      
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: -3.5rem;
+    // }
   }
   .cascade-nav {
     display: none;

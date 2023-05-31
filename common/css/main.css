@@ -193,7 +193,10 @@ ul {
 }
 
 body {
-  background: #252525 url(../images/tab/page_background.png) 0px 0px repeat-x;
+  background-image: url("../images/tab/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .h-pc {
@@ -247,18 +250,6 @@ body {
 .header {
   position: relative;
   padding-top: 5rem;
-}
-.header::before {
-  content: "";
-  background-image: url("../images/tab/header_light.png");
-  background-repeat: no-repeat;
-  width: 86rem;
-  height: 4rem;
-  position: absolute;
-  top: 5rem;
-  transform: translateX(-50%);
-  left: 50%;
-  z-index: 1;
 }
 .header-row {
   display: flex;
@@ -338,26 +329,7 @@ body {
 }
 
 .footer {
-  border-top: solid 1px #1A1A1A;
   position: relative;
-}
-.footer-line {
-  height: 1px;
-  margin: 0px;
-  padding: 0px;
-  border: none;
-  color: #353535;
-  background-color: #353535;
-}
-.footer::before {
-  content: "";
-  background-image: url(../images/tab/footer_light.png);
-  width: 86rem;
-  min-height: 4.3rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .p_top {
@@ -411,24 +383,24 @@ body {
 }
 .p_top .blue {
   left: 0;
-  background-image: url("../images/tab/content_box_blue.png");
+  background-image: url("../images/tab/bg1.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
-  background-size: 100% 200%;
+  background-size: cover;
 }
 .p_top .green {
   left: calc(33.33% + 0.6rem);
-  background-image: url("../images/tab/content_box_green.png");
+  background-image: url("../images/tab/bg2.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
-  background-size: 100% 200%;
+  background-size: cover;
 }
 .p_top .yellow {
   left: calc(66.66% + 1.2rem);
-  background-image: url("../images/tab/content_box_yellow.png");
+  background-image: url("../images/tab/bg3.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
-  background-size: 100% 200%;
+  background-size: cover;
 }
 .p_top .tabcontent {
   width: 0;
@@ -493,14 +465,6 @@ body {
 .p_top .tabcontent .cascade-content iframe {
   width: 100%;
   height: calc(100% - 1rem);
-}
-.p_top .tabcontent .cascade-footer {
-  background-image: url("../images/tab/content_footer.png");
-  width: 100%;
-  height: 5rem;
-  position: absolute;
-  left: 0;
-  bottom: -3.5rem;
 }
 .p_top .cascade-nav {
   display: none;

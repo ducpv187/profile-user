@@ -558,6 +558,7 @@ body {
 }
 .box-map .tab-map-parent {
   width: 100%;
+  margin-bottom: 0.5rem;
 }
 .box-map .tab-parent {
   width: 100%;
@@ -566,14 +567,23 @@ body {
   font-size: 1.6rem;
   line-height: 1;
   padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
   cursor: pointer;
+}
+.box-map .tab-parent.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .box-map .tab-child {
   display: none;
   background-color: #ffffff;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
   cursor: pointer;
 }
 

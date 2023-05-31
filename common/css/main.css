@@ -233,6 +233,7 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #252525;
+  border-radius: 1.5rem;
 }
 
 /* Handle */

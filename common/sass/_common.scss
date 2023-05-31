@@ -41,6 +41,7 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
     background: $back_light; 
+    border-radius: 1.5rem;
 }
 
 /* Handle */

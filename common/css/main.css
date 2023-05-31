@@ -194,9 +194,8 @@ ul {
 
 body {
   background-image: url("../images/tab/background.jpg");
-  background-size: cover;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .h-pc {
@@ -250,6 +249,7 @@ body {
 .header {
   position: relative;
   padding-top: 5rem;
+  margin-top: 3.5rem;
 }
 .header-row {
   display: flex;
@@ -405,7 +405,7 @@ body {
 .p_top .tabcontent {
   width: 0;
   opacity: 0;
-  height: 46rem;
+  height: 50rem;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -453,7 +453,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  background-color: #252525;
+  background-color: #012B65;
   z-index: 1;
 }
 .p_top .tabcontent .cascade-content {

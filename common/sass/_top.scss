@@ -77,7 +77,8 @@
   .tabcontent {
     width: 0;
     opacity: 0;
-    height: 46rem;
+    // height: 46rem;
+    height: 50rem;
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -121,7 +122,7 @@
           top: 50%;
           transform: translate(-50%,-50%);
           left: 50%;
-          background-color: $back_light ;
+          background-color: #012B65 ;
           z-index: 1;
         }  
       }   

@@ -387,8 +387,8 @@ body {
 .p_top .cascade-menu .ttl-item.before-blue::before {
   background-color: #008db0;
 }
-.p_top .cascade-menu .ttl-item.before-blue::before {
-  background-color: #008db0;
+.p_top .cascade-menu .ttl-item.before-green::before {
+  background-color: #82a000;
 }
 .p_top .cascade-menu .ttl-item.before-orange::before {
   background-color: #e09600;

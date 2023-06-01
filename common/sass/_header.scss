@@ -3,19 +3,7 @@
     position: relative;    
     padding-top: 5rem;
     margin-top: 3.5rem;    
-    width: 100%;
-    // &::before {
-    //     content: "";
-    //     background-image: url("../images/tab/header_light.png");
-    //     background-repeat: no-repeat;
-    //     width: 86rem;
-    //     height: 4rem;
-    //     position: absolute;
-    //     top: 5rem;
-    //     transform: translateX(-50%);
-    //     left: 50%;
-    //     z-index: 1;
-    // }
+    width: 100%;   
     &-row {
         display: flex;
         justify-content: space-between;        

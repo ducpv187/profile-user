@@ -159,7 +159,7 @@ $(document).ready(function() {
 
   // If absolute URL from the remote server is provided, configure the CORS
 // header on that server.
-var url = 'https://anthanhbicsol.com/wp-content/uploads/2023/05/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf';
+var url = 'common/pdf/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf';
 
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 var pdfjsLib = window['pdfjs-dist/build/pdf'];

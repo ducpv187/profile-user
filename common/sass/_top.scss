@@ -23,16 +23,45 @@
         z-index: 2 !important ;
       }
     }
+    .gr-ttl {
+      width: 100%;
+      position: absolute;
+      bottom: 12rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     .ttl-item {
       width: 100%;
       font-size: 2.4rem;
       line-height: 1.2;
       text-align: center;
       color: $white;
-      position: absolute;
-      bottom: 18rem;
-      left: 50%;
-      transform: translateX(-50%);
+      padding-bottom: 2rem;
+      position: relative;
+      &::before {
+        content: "";
+        width: 70%;
+        height: 3px;      
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &.before-blue {
+        &::before {          
+          background-color: #008db0;          
+        } 
+      }
+      &.before-green {
+        &::before {          
+          background-color: #82a000;          
+        } 
+      }
+      &.before-orange {
+        &::before {          
+          background-color: #e09600;          
+        } 
+      }
     }
     .sub-ttl-item {
       width: 100%;
@@ -40,10 +69,7 @@
       line-height: 1.2;
       text-align: center;
       color: $white;
-      position: absolute;
-      bottom: 14rem;
-      left: 50%;
-      transform: translateX(-50%);
+      padding-top: 1rem;
     }
   }
   .blue {      
@@ -192,39 +218,39 @@
   .position {
     font-size: 1.3rem;
     line-height: 1.2;
-    color: $gray_dark;
+    color: #E0E0E0;
     margin-bottom: 3rem;
   }
   .mobile {
     .link-tel {
       font-size: 1.3rem;
       line-height: 1.2;
-      color: $gray_dark;
+      color: $white;
     }
   }
   .what-app {
     .link-what-app {
       font-size: 1.3rem;
       line-height: 1.2;
-      color: $gray_dark;
+      color: $white;
     }
   }
   .time-start {
     font-size: 1.3rem;    
-    color: $gray_dark;
+    color: $white;
   }
   .email {
     .link-email {
       font-size: 1.3rem;
       line-height: 1.2;
-      color: $gray_dark;
+      color: $white;
     }
   }
   .website {
     .link-website {
       font-size: 1.3rem;
       line-height: 1.2;
-      color: $gray_dark;
+      color: $white;
     }
   }
 }

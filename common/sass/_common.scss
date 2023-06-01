@@ -55,5 +55,20 @@ body {
     background: #E0E0E0; 
 }
 
-
+//custom Dots list
+.dots-list {
+    position: relative;
+    padding-left: 1rem;
+    &::before {
+        content: "";
+        background-color: $white;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+}
  

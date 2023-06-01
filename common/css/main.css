@@ -248,6 +248,22 @@ body {
   background: #E0E0E0;
 }
 
+.dots-list {
+  position: relative;
+  padding-left: 1rem;
+}
+.dots-list::before {
+  content: "";
+  background-color: #ffffff;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
 .header {
   display: inline-block;
   position: relative;
@@ -268,11 +284,11 @@ body {
 .header .r-left .name-user {
   font-size: 4rem;
   line-height: 1.2;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 1rem;
 }
 .header .r-left .postion {
-  color: #969696;
+  color: #ffffff;
   font-size: 1.5rem;
   margin-top: 0;
 }
@@ -359,16 +375,39 @@ body {
 .p_top .cascade-menu .tab-item.active {
   z-index: 2 !important;
 }
+.p_top .cascade-menu .gr-ttl {
+  width: 100%;
+  position: absolute;
+  bottom: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .p_top .cascade-menu .ttl-item {
   width: 100%;
   font-size: 2.4rem;
   line-height: 1.2;
   text-align: center;
   color: #ffffff;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.p_top .cascade-menu .ttl-item::before {
+  content: "";
+  width: 70%;
+  height: 3px;
   position: absolute;
-  bottom: 18rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.p_top .cascade-menu .ttl-item.before-blue::before {
+  background-color: #008db0;
+}
+.p_top .cascade-menu .ttl-item.before-green::before {
+  background-color: #82a000;
+}
+.p_top .cascade-menu .ttl-item.before-orange::before {
+  background-color: #e09600;
 }
 .p_top .cascade-menu .sub-ttl-item {
   width: 100%;
@@ -376,10 +415,7 @@ body {
   line-height: 1.2;
   text-align: center;
   color: #ffffff;
-  position: absolute;
-  bottom: 14rem;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-top: 1rem;
 }
 .p_top .blue {
   left: 0;
@@ -522,32 +558,32 @@ body {
 .box .position {
   font-size: 1.3rem;
   line-height: 1.2;
-  color: #9f9f9f;
+  color: #E0E0E0;
   margin-bottom: 3rem;
 }
 .box .mobile .link-tel {
   font-size: 1.3rem;
   line-height: 1.2;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 .box .what-app .link-what-app {
   font-size: 1.3rem;
   line-height: 1.2;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 .box .time-start {
   font-size: 1.3rem;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 .box .email .link-email {
   font-size: 1.3rem;
   line-height: 1.2;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 .box .website .link-website {
   font-size: 1.3rem;
   line-height: 1.2;
-  color: #9f9f9f;
+  color: #ffffff;
 }
 
 /*templat3 */

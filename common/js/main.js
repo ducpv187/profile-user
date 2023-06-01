@@ -2,7 +2,7 @@ $(document).ready(function() {
   //function ClickItem => show-hidden content
   $( ".cascade-menu .js-tabitem" ).on( "click", function() { 
     let thisClick= $(this);
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;  
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;  
 
     //global data color
     let dataColor = $(this).data('color');  
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   //function button Close => show-hidden content
   $( ".btn-close" ).on( "click", function() {
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
    
     //callback function closeTab
     closeTab(innerWidthCase,400);    
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   //function button arrow prev-next
   $( ".cascade-nav" ).on( "click", function() {
-    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 3;
+    let innerWidthCase = $( ".cascade-menu" ).innerWidth() / 4;
     let thisActive = $(".cascade-menu .js-tabitem.active");
     let thisIdActive = $(".cascade-menu .js-tabitem.active").data("id") + 1;
     let thisIdNext;
@@ -157,16 +157,19 @@ $(document).ready(function() {
   });
 
 
-  //view show pdf js
-
-  // Let's initialize the PDFjs library
-  var pdfjsLib = window['pdfjs-dist/build/pdf'];
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
-
-  var pdfViewer =new PDFjsViewer($('.pdfjs-viewer'));
+  //view show pdf js  
+  // $(".pdf-show").click(function(){
+  //   alert("Inner width of div: " + $("div").innerWidth());
+  // });
+  // let x = screen.width;
+  // console.log(x);    
+  // if( x <= 968 ){
+  //   // console.log("hihii");
+  //   $(".iframe-pdf").css("display", "none");
+  //   $(".picture").css("display", "block");
+  // } else {
+  //   $(".iframe-pdf").css("display", "block");
+  //   $(".picture").css("display", "none");
+  // }
   
-  // load a PDF file
-
-  pdfViewer.loadDocument('https://anthanhbicsol.com/wp-content/uploads/2023/05/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf');
-
 });

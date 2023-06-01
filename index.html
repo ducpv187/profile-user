@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-      <link rel="stylesheet" href="./common/css/pdfjs-viewer.css">
+      <!-- <link rel="stylesheet" href="./common/css/pdfjs-viewer.css"> -->
       <link rel="stylesheet" type="text/css" href="common/css/main.css">      
       <title> Urse Profile </title>
   </head>
@@ -60,9 +60,15 @@
                 <div class="ttl-item before-yellow"> Warehouse & Office </div>
                 <div class="sub-ttl-item">Map</div>
               </div>            
-            </li>         
+            </li>   
+            <li data-href="tab4" class="tab-item orange js-tabitem" data-id="3" data-color="#D75902" data-left="18">
+              <div class="gr-ttl">
+                <div class="ttl-item before-orange"> Company Introduction </div>
+                <div class="sub-ttl-item">Video</div>
+              </div>            
+            </li>          
           </ul>
-          <div class="tabcontent" data-total="2" data-minus="6">
+          <div class="tabcontent" data-total="3" data-minus="6">
             <div class="cascade-close">
               <div class="btn-close"></div>
             </div>
@@ -194,23 +200,21 @@
       </div>
       <div class="position-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.0051891937505!2d-95.59657912526613!3d29.632592537968183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640e7ae3b6c4325%3A0xd292f0ce3db9b672!2s10701%20Corporate%20Dr%20%23268%2C%20Stafford%2C%20TX%2077477%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1685435537004!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
       </div>
      </div>
     </template>
 
-    <template id="tab4">
-      <div class="template template4">
-        <h2 class="test">tabcontent4</h2>      
-      </div>
+    <template id="tab4">         
+      <iframe class="tab-video" src="https://www.youtube.com/embed/ad_GtSnle0w" title="YouTube video player">
+      </iframe>
     </template>
     
     
     </main>    
 
     <!-- add library pdfjs -->    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./common/js/pdfjs-viewer.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./common/js/pdfjs-viewer.js"></script> -->
     <!-- end add library pdf.js -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>      

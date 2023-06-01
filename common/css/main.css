@@ -365,7 +365,7 @@ body {
   height: 50rem;
 }
 .p_top .cascade-menu .tab-item {
-  width: calc(33.33% - 2rem);
+  width: calc(25% - 2rem);
   height: 50rem;
   position: absolute;
   top: 0;
@@ -394,7 +394,7 @@ body {
 .p_top .cascade-menu .ttl-item::before {
   content: "";
   width: 70%;
-  height: 3px;
+  height: 2px;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -408,6 +408,9 @@ body {
 }
 .p_top .cascade-menu .ttl-item.before-yellow::before {
   background-color: #e09600;
+}
+.p_top .cascade-menu .ttl-item.before-orange::before {
+  background-color: #cd6703;
 }
 .p_top .cascade-menu .sub-ttl-item {
   width: 100%;
@@ -425,18 +428,25 @@ body {
   background-size: cover;
 }
 .p_top .green {
-  left: calc(33.33% + 0.6rem);
+  left: calc(25% + 0.6rem);
   background-image: url("../images/tab/bg2.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   background-size: cover;
 }
 .p_top .yellow {
-  left: calc(66.66% + 1.2rem);
+  left: calc(50% + 1.2rem);
   background-image: url("../images/tab/bg3.jpg");
   background-repeat: no-repeat;
   background-position: 0px 0px;
   background-size: cover;
+}
+.p_top .orange {
+  background-image: url("../images/tab/bg4.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  left: calc(75% + 1.8rem);
 }
 .p_top .tabcontent {
   width: 0;
@@ -445,7 +455,7 @@ body {
   background-color: transparent;
   position: absolute;
   top: 0;
-  left: calc(33.33% + 0.6rem);
+  left: calc(25% + 0.6rem);
 }
 .p_top .tabcontent .cascade-close {
   position: relative;

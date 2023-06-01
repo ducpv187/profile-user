@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-      <!-- <link rel="stylesheet" href="./common/css/pdfjs-viewer.css"> -->
+      <link rel="stylesheet" href="./common/css/pdfjs-viewer.css">
       <link rel="stylesheet" type="text/css" href="common/css/main.css">      
       <title> Urse Profile </title>
   </head>
@@ -81,9 +81,18 @@
           </div>
         </div>
       
-        <!-- <div class="pdfjs-viewer">
-          <iframe src="https://anthanhbicsol.com/wp-content/uploads/2023/05/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf"></iframe>
-        </div> -->
+        <div class="pdfjs-viewer">
+          
+          <!-- <iframe src="https://anthanhbicsol.com/wp-content/uploads/2023/05/An-Thanh-Bicsol-profile-FINAL-1_compressed.pdf"></iframe> -->
+        </div>
+
+        <div>
+          <button id="prev">Previous</button>
+          <button id="next">Next</button>
+          &nbsp; &nbsp;
+          <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+        </div>
+        <canvas id="the-canvas"></canvas>
 
       </div>
 
@@ -211,6 +220,8 @@
     
     
     </main>    
+
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 
     <!-- add library pdfjs -->    
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js" integrity="sha512-Z8CqofpIcnJN80feS2uccz+pXWgZzeKxDsDNMD/dJ6997/LSRY+W4NmEt9acwR+Gt9OHN0kkI1CTianCwoqcjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

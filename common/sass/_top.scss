@@ -23,45 +23,16 @@
         z-index: 2 !important ;
       }
     }
-    .gr-ttl {
-      width: 100%;
-      position: absolute;
-      bottom: 12rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
     .ttl-item {
       width: 100%;
       font-size: 2.4rem;
       line-height: 1.2;
       text-align: center;
       color: $white;
-      padding-bottom: 2rem;
-      position: relative;
-      &::before {
-        content: "";
-        width: 70%;
-        height: 3px;      
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      &.before-blue {
-        &::before {          
-          background-color: #008db0;          
-        } 
-      }
-      &.before-green {
-        &::before {          
-          background-color: #82a000;          
-        } 
-      }
-      &.before-orange {
-        &::before {          
-          background-color: #e09600;          
-        } 
-      }
+      position: absolute;
+      bottom: 18rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .sub-ttl-item {
       width: 100%;
@@ -69,11 +40,10 @@
       line-height: 1.2;
       text-align: center;
       color: $white;
-      padding-top: 1rem;
-      // position: absolute;
-      // bottom: 14rem;
-      // left: 50%;
-      // transform: translateX(-50%);
+      position: absolute;
+      bottom: 14rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   .blue {      
@@ -107,8 +77,7 @@
   .tabcontent {
     width: 0;
     opacity: 0;
-    // height: 46rem;
-    height: 50rem;
+    height: 46rem;
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -152,7 +121,7 @@
           top: 50%;
           transform: translate(-50%,-50%);
           left: 50%;
-          background-color: #012B65 ;
+          background-color: $back_light ;
           z-index: 1;
         }  
       }   

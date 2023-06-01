@@ -82,7 +82,7 @@
     background-image: url("../images/tab/bg1.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: cover;
+    background-size: 100% 100%;
     
   }
   .green {    
@@ -90,20 +90,20 @@
     background-image: url("../images/tab/bg2.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: cover;    
+    background-size: 100% 100%;    
   }
   .yellow {  
     left: calc(50% + 1.2rem);   
     background-image: url("../images/tab/bg3.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: cover;    
+    background-size: 100% 100%;    
   }
   .orange {
     background-image: url("../images/tab/bg4.jpg");
     background-repeat: no-repeat;
     background-position: 0px 0px;
-    background-size: cover;  
+    background-size: 100% 100%;  
     left: calc(75% + 1.8rem);
   }
 

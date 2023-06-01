@@ -1,7 +1,9 @@
 .header {     
+    display: inline-block;
     position: relative;    
     padding-top: 5rem;
-    margin-top: 3.5rem;
+    margin-top: 3.5rem;    
+    width: 100%;
     // &::before {
     //     content: "";
     //     background-image: url("../images/tab/header_light.png");

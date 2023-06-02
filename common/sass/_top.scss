@@ -26,21 +26,22 @@
     .gr-ttl {
       width: 100%;
       position: absolute;
-      bottom: 12rem;
+      bottom: 10rem;
       left: 50%;
       transform: translateX(-50%);
     }
     .ttl-item {
-      width: 100%;
-      font-size: 2.4rem;
+      width: calc(100% - 0.5rem);
+      margin: 0 auto;
+      font-size: 2rem;
       line-height: 1.2;
       text-align: center;
-      color: $white;
+      color: #ffffff;
       padding-bottom: 2rem;
       position: relative;
       &::before {
         content: "";
-        width: 70%;
+        width: 75%;
         height: 2px;      
         position: absolute;
         bottom: 0;
@@ -67,14 +68,6 @@
           background-color: #cd6703;          
         } 
       }
-    }
-    .sub-ttl-item {
-      width: 100%;
-      font-size: 1.5rem;
-      line-height: 1.2;
-      text-align: center;
-      color: $white;
-      padding-top: 1rem;
     }
   }
   .blue {      

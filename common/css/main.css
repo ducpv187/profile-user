@@ -276,7 +276,7 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  margin: 2.5rem 0 1.5rem 0;
+  margin: 3rem 0 1.5rem 0;
 }
 .header .r-left {
   width: calc(50% - 1rem);

@@ -156,19 +156,4 @@ $(document).ready(function() {
     $(".position-map").empty().append(dataIframe);
   });
   
-  //view show pdf js  
-  // $(".pdf-show").click(function(){
-  //   alert("Inner width of div: " + $("div").innerWidth());
-  // });
-  // let x = screen.width;
-  // console.log(x);    
-  // if( x <= 968 ){
-  //   // console.log("hihii");
-  //   $(".iframe-pdf").css("display", "none");
-  //   $(".picture").css("display", "block");
-  // } else {
-  //   $(".iframe-pdf").css("display", "block");
-  //   $(".picture").css("display", "none");
-  // }
-  
 });
